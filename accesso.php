@@ -17,7 +17,7 @@ $censoredpassword=str_replace($password, "*****...", $password);
 <body>
     <h1>Benvenuto "<?php echo $username?>"</h1>
     <section>
-        <h2>UNCESORED</h2>
+        <h2>UNCENSORED</h2>
         <p>Il tuo username: <?php echo $username?> <br> Lunghezza username: <?php echo strlen($username)?></p>
         <p>La tua password: <?php echo $password?> <br> Lunghezza password: <?php echo strlen($password)?></p>
     </section>
