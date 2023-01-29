@@ -1,6 +1,9 @@
 <?php 
 $username = $_POST["username"];
-$password = $_POST["password"]
+$password = $_POST["password"];
+
+$censoredpassword=str_replace($password, "*****...", $password);
+
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +15,16 @@ $password = $_POST["password"]
     <title>Document</title>
 </head>
 <body>
-    <h1>Benvenuto <?php echo $username; ?></h1>
+    <h1>Benvenuto "<?php echo $username?>"</h1>
+    <section>
+        <h2>UNCESORED</h2>
+        <p>Il tuo username: <?php echo $username?> <br> Lunghezza username: <?php echo strlen($username)?></p>
+        <p>La tua password: <?php echo $password?> <br> Lunghezza password: <?php echo strlen($password)?></p>
+    </section>
+    <section>
+        <h2>CENSORED</h2>
+        <p>Il tuo username: <?php echo $username?> <br> Lunghezza username: <?php echo strlen($username)?></p>
+        <p>La tua password: <?php echo $censoredpassword?> <br> Lunghezza password: <?php echo strlen($password)?></p>
+    </section>
 </body>
 </html>
